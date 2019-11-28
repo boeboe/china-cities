@@ -1,5 +1,6 @@
 """Package setup """
 from setuptools import setup
+from china_cities import __version__
 
 def readme():
     """Readme """
@@ -7,7 +8,7 @@ def readme():
         return readme_file.read()
 
 setup(name='china_cities',
-      version="0.0.1",
+      version=__version__,
       description='Python package to get the names of Chinese cities and provinces',
       long_description=readme(),
       author="Bart Van Bos",
@@ -16,6 +17,7 @@ setup(name='china_cities',
       url='https://github.com/boeboe/china-cities',
       packages=['china_cities'],
       keywords='china chinese cities provinces',
+      include_package_data=True,
       zip_safe=False,
       classifiers=[
                     'Development Status :: 5 - Production/Stable',
@@ -23,11 +25,8 @@ setup(name='china_cities',
                     'Natural Language :: English',
                     'License :: OSI Approved :: MIT License',
                     'Programming Language :: Python',
-                    'Programming Language :: Python :: 3',
-                    'Programming Language :: Python :: 3.5',
-                    'Programming Language :: Python :: 3.6',
-                    'Programming Language :: Python :: 3.7',
-                    'Programming Language :: Python :: 3 :: Only',
+                    'Programming Language :: Python :: 2',
+                    'Programming Language :: Python :: 3'
                     'Topic :: Software Development :: Libraries :: Python Modules'
       ],
       test_suite='tests',

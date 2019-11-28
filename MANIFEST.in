@@ -1,1 +1,1 @@
-recursive-include china_cities *.csv
+recursive-include china_cities *.csv *.py
