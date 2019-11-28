@@ -5,7 +5,7 @@
 `china_cities` is a python package to list Chinese cities and provinces. The cities 
 can be retrieved in English or Chinese language.
 
-The source is based on [`wikipedia`](https://en.wikipedia.org/wiki/List_of_cities_in_China)
+The data is based on [`wikipedia`](https://en.wikipedia.org/wiki/List_of_cities_in_China) as a source
 
 ## Installation
 
