@@ -52,4 +52,4 @@ class CitiesTest(unittest.TestCase):
         '''Test function '''
         provinces = china_cities.get_provinces()
         self.assertTrue(len(provinces) > 0)
-        self.assertEqual(len(provinces), 28)
+        self.assertEqual(len(provinces), 34)

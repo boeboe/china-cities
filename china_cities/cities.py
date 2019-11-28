@@ -54,7 +54,6 @@ def get_provinces():
     """Return a list of all Chinese Provinces """
     result = []
     for city in CITIES:
-        if not city.province in result and not city.province in ["autonomous", "municipal"]:
+        if not city.province in result:
             result.append(city.province)
-            print(city.province)
     return result

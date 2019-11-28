@@ -1,8 +1,6 @@
 """
 Script to generate json file with Chinese cities
-
 Source: https://en.wikipedia.org/wiki/List_of_cities_in_China
-
 """
 import hashlib
 import os
@@ -37,7 +35,11 @@ def generate():
         for city_column in city_columns:
             name_en = city_column.find_element_by_xpath('(.//td)[1]').text
             name_cn = city_column.find_element_by_xpath('(.//td)[2]').text
+            if "特别行政区" in name_cn:
+                name_cn = name_cn.replace("特别行政区", "")
             province = city_column.find_element_by_xpath('(.//td)[3]').text
+            if province in ["autonomous", "municipal"]:
+                province = name_en
             file.write("{},{},{}\n".format(name_en, name_cn, province))
 
         file.close()
