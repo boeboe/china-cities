@@ -28,7 +28,8 @@ setup(name='china_cities',
                     'Programming Language :: Python',
                     'Programming Language :: Python :: 2',
                     'Programming Language :: Python :: 3',
-                    'Topic :: Software Development :: Libraries :: Python Modules'
+                    "Topic :: Software Development :: Libraries :: Python Modules",
+                    "Topic :: System :: Software Distribution"
       ],
       test_suite='tests',
       tests_require=['unittest']

@@ -1,9 +1,11 @@
 RUNTEST=python3 -m unittest -v -b
-RUNGENERATE=python3 generate/generate.py
 
 ALLMODULES=$(patsubst %.py, %, $(wildcard test_*.py))
 
-default: tests
+.PHONY: tests build clean
+
+default: clean build
+upload: upload_testpypi upload_pypi
 
 tests:
 	${RUNTEST} ${ALLMODULES}
@@ -12,4 +14,16 @@ tests:
 	${RUNTEST} test_$@
 
 generate: china_cities/cities.csv
-	${RUNGENERATE}
+	python3 generate/generate.py
+
+build:
+	python2 setup.py install && python3 setup.py install
+
+clean:
+	rm -rf ./build ./dist ./*.egg-info ./*/__pycache__ ./*/*.pyc
+
+upload_testpypi:
+	twine upload --repository testpypi dist/*
+
+upload_pypi:
+	twine upload --repository pypi dist/*

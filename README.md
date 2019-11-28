@@ -11,7 +11,7 @@ The data is based on [`wikipedia`](https://en.wikipedia.org/wiki/List_of_cities_
 
 ### Install with pip
 
-Run `pip install git+git://github.com/boeboe/china-cities.git`
+Run `pip install china-cities`
 
 ### Install from source
 
