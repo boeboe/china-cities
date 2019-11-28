@@ -1,0 +1,55 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# JetBrains
+.idea
+*.iml
+
+# VSCode
+.vscode/
+
+_*/
+.DS_Store
+/data/
+/tmp/
+*.pickle*
+
+# Temporarily markdown file, used to store local todos are temp text snippets
+TEMP.md
+
+# No images
+*.gif
+*.png
+*.jpg
+
+# Mypy
+.mypy_cache
+
+# Pytest
+.pytest_cache
+
+# Backup files
+*~
+
+# Selenium Driver logs
+chromedriver.log
