@@ -19,7 +19,7 @@ class City():
 
 CITIES = []
 
-with open(os.path.join(__location__, 'cities.csv')) as fileHandler:
+with open(os.path.join(__location__, 'cities.csv'), encoding='utf-8') as fileHandler:
     for line in fileHandler:
         split = line.strip().split(",")
         CITIES.append(City(name_en=split[0], name_cn=split[1], province=split[2]))
