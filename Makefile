@@ -17,10 +17,10 @@ generate: china_cities/cities.csv
 	python3 generate/generate.py
 
 install:
-	python2 setup.py install && python3 setup.py install
+	python3 setup.py install
 
 build:
-	python2 setup.py sdist bdist_wheel && python3 setup.py sdist bdist_wheel
+	python3 setup.py sdist bdist_wheel
 
 clean:
 	rm -rf ./build ./dist ./*.egg-info ./*/__pycache__ ./*/*.pyc
